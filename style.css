@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --white-color: rgb(245, 245, 245);
+  --gray-color-1: rgb(46, 55, 74);
+
+  --primary-color: hsl(233, 86%, 59%);
+  --primary-color-opac: hsla(270, 70%, 59%, 0.3);
+  --primary-light-color: hsl(232, 100%, 71%);
+  --primary-light-color-opac: hsla(227, 75%, 43%, 0.2);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  position: relative;
+  background-color: var(--white-color);
+  min-height: 100vh;
+  font-size: 1.6rem;
+  color: var(--gray-color-1);
+}
+
+.header {
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      var(--primary-light-color-opac) 40%,
+      var(--primary-color-opac)
+    ),
+    url("./hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  font-size: 1.4rem;
+  position: absolute;
+  background-color: white;
+  width: 36rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem 4rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: flex;
+  align-items: center;
+
+  text-indent: 1rem;
+  padding: 0.3rem 0rem;
+  font-weight: 600;
+  opacity: 1;
+  transition: all 0.45s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.controls {
+  color: var(--gray-color-1);
+  background-color: var(--white-color);
+  border: 1px solid rgba(204, 204, 204, 0.353);
+  font-size: 1.6rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.controls:placeholder-shown ~ label {
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+
+.controls:focus {
+  box-shadow: 0px 0px 6px rgba(42, 45, 72, 0.353);
+  outline: 2.6px solid var(--primary-color);
+}
+
+/* .controls:invalid {
+  outline: 2.6px solid rgb(187, 94, 94);
+} */
+
+.input-group {
+  margin-bottom: 0.6rem;
+}
+
+.form-heading {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  top: -1.2rem;
+  font-size: 2.6rem;
+}
+
+.btn-box {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.btn {
+  margin: 0.8rem 0rem;
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--white-color);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: var(--primary-light-color);
+  transform: scale(1.02);
+}
+.btn:active {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(1) translateY(2px);
+}
+
+a {
+  color: var(--primary-color);
+}
